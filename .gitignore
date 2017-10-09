@@ -1,0 +1,8 @@
+*.pyc
+*~
+__pycache__
+MCMenvir
+db.sqlite3
+/static
+/AppTestPythoAnyWhere/static
+.DS_Store
