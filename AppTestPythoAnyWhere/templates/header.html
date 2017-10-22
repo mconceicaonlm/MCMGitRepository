@@ -3,7 +3,6 @@
 <head>
 <title> Pagina de testes </title>
 <meta charset="UTF-8"/>
-<title>Bootstrap Example</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 {% load staticfiles %} 
@@ -12,15 +11,14 @@
 
 <style>
     /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
-    .row.content {height: 560px}
-    
+    .row.content {height: 549px}
     /* Set gray background color and 100% height */
     .sidenav {
-    background-color: orange;
+    background-color:blue;
     height: 100%;
-    border-bottom: thick dotted darkblue;
+    color-interpolation-filters: red;
+    border-bottom: thick dotted darkgoldenrod;
     }
-    
     .body {
     width: 100%;
     background-image: url("{% static 'img/Lisboa.png' %}");
@@ -28,14 +26,18 @@
     background-repeat: no-repeat;
     border-style: solid;
     }
-
     /* Set black background color, white text and some padding */
     footer {
-    background-color: darkblue;
+    background-color: white;
     color: white;
     padding: 15px;
     }
-    
+    .bt2{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    padding-left: 1000px;
+    }
     /* On small screens, set height to 'auto' for sidenav and grid */
     @media screen and (max-width: 767px) {
     .sidenav {
@@ -44,44 +46,43 @@
     }
     .row.content {height: auto;} 
     }
+    .busca-organica{
+      width:120px;
+      height:27px;
+      background-color:#FFF;
+      display:none;
+    }
+    .btn-pesq{
+      display:block;
+    }
 </style>
 </head>
-
-<body class="body" style="additive-symbols: #f6f6f6">
-<div class="container-fluid">
-  <div class="row content">
-    <div class="col-sm-3 sidenav">
-      <h4>Para testes </h4>
-      <ul class="nav nav-pills nav-stacked">
-        <li class="active"><a href="#section1">Home</a></li>
-        <li><a href="#section2">Friends</a></li>
-        <li><a href="#section3">Family</a></li>
-        <li><a href="#section3">Photos</a></li>        
-        <li><a href="#section4">Contacts</a></li>
-      </ul><br>
-      <div class="input-group">
-        <input type="text" class="form-control" placeholder="Search Blog..">
-        <span class="input-group-btn">
-          <button class="btn btn-default" type="button">
-            <span class="glyphicon glyphicon-search"></span>
-          </button>
-        </span>
+<body class="body" style=color:black>
+  <div class="container-fluid">
+    <div class="row content">
+      <div class="col-sm-2 sidenav">
+        <h4>Para testes </h4>
+          <ul class="nav nav-pills nav-stacked">
+            <li><a href="">Home</a></li>
+            <li><a href="/blog/">blog</a></li>  
+            <li><a href="/photos/">Photos</a></li>
+            <li class="active"><a href="/contact/">Contacts</a></li>
+          </ul>
       </div>
     </div>
   </div>
-</div>
-
-<footer class="container-fluid">
-    <div class="container-fluid" style="margin-right:0%">
-        <p>
-            <h4>Links Uteis: <a href="#" target="blank"> LinkedIn </a>
-                |<a href="#" target="blank"> Facebook </a> 
-                |<a href="#" target="blank"> Google </a> 
-            </h4>
-        </p>        
-    </div>
-</footer>
-
 </body>
+  <footer class="container-fluid">
+    <div class="container-fluid" style="margin-right:0%">
+      <a href="https://www.facebook.com/facebook" target="_blank">
+      <img src="{% static 'img/logos/if_facebook_128_221698.png' %}"></a>
+      <a href="https://www.linkedin.com/"target="_blank">
+      <img src="{% static 'img/logos/if_linkedin_128_221700.png' %}" style='max-height:100px' alt="face"></a>            
+      <a href="https://www.pinterest.pt/"target="_blank">
+      <img src="{% static 'img/logos/if_pinterest_128_221705.png' %}" style='max-height:100px' alt="face"></a>
+      <a href="https://www.google.com/"target="_blank">
+      <img src="{% static 'img/logos/if_google_128_221701.png' %}" style='max-height:100px' alt="face"></a>
+    </div>
+  </footer>
 </html>
 
