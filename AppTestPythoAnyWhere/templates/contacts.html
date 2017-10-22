@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <title> Contatos Pessoais</title>
+    <meta charset="UTF-8"/>
+    {% load staticfiles %} 
+    <link rel='stylesheet' href="{% static 'css/bootstrap.min.css' %}"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <nav>
+    <ul class="nav nav-pills">
+        <li role="presentation" class="active"><a href='/'>Home</a></li>
+        <li role="presentation"><a href="#">Profile</a></li>
+        <li role="presentation"><a href='/contact/'>Messages</a></li>
+    </ul>
+    </nav>
+    <!-- os styles vai buscar a css -->
+    <nav>
+         <!-- <p class="navbar-text navbar-right">Signed in as <a href="#" class="navbar-link">MCM</a></p> -->
+        <img src="{% static 'img/guarda.jpg' %}" class = "img-responsive">
+    </nav>
+        
+</head>
+<body>
+    <div class = "container-fluid" style="min-height:95%">
+        <div class = 'col-sm-4'>
+            <div class="container-fluid">
+                {% block content%}
+            <!-- aqui aparece tudo o que se encontra na pagina de onde esta página é chamada neste caso basic.html -->
+                {% endblock %}        
+            </div>        
+        </div>
+        <div class = 'col-sm-8'>
+            <form id="ContactForm" data-toggle="validator" method="POST">
+                {% csrf_token %}
+                <!--  {{ form }} 
+                <div class="form-actions">
+                <input type="submit" value="Send">
+                </div>-->
+                <div class="ContactForm">
+                    <div class = 'col-sm-8'>
+                        <br/>
+                        <div class="row">
+                            <label for="nome">O seu nome:</label><br />
+                            <input id="name" class="input" name="nome" type="text" value="" size="30" required/><br />
+                        </div>
+                        <fieldset>
+                        <div class="row">
+                            <label for="assunto">Assunto do mail:</label><br />
+                            <input id="subject" class="input" name="assunto" type="text" value="" size="30" required/><br />
+                        </div>
+                        <div class="row">
+                            <label for="correio">O seu endereço email:</label><br />
+                            <input id="email" class="input" name="correio" type="email" value="" size="30" required /><br />
+                        </div>
+                        <div class="row">
+                            <label for="mensagem">Menssagem:</label><br />
+                            <textarea id="message" class="input" name="mensagem" rows="2" cols="90" required></textarea><br />
+                        </div>
+                        </fieldset>			
+                    </div>
+                    <div class = 'col-sm-4'>
+                        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                        <input type="submit" class="btn btn-primary" value=" enviar "/> 
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+<footer class="container-fluid">
+    <div class = 'col-sm-12'>
+        <div class="container-fluid" style="margin-right:0%">
+        <a href="https://www.facebook.com/facebook" target="_blank">
+        <img src="{% static 'img/logos/if_facebook_128_221698.png' %}"></a>
+        
+        <a href="https://www.linkedin.com/"target="_blank">
+        <img src="{% static 'img/logos/if_linkedin_128_221700.png' %}" style='max-height:100px' alt="face"></a>            
+        
+        <a href="https://www.pinterest.pt/"target="_blank">
+        <img src="{% static 'img/logos/if_pinterest_128_221705.png' %}" style='max-height:100px' alt="face"></a>
+
+        <a href="https://www.google.com/"target="_blank">
+        <img src="{% static 'img/logos/if_google_128_221701.png' %}" style='max-height:100px' alt="face"></a>  
+        </div>
+    </div>
+</footer>
+</html>
