@@ -11,16 +11,16 @@
     <nav>
         <ul class="nav nav-pills">
             <li role="presentation" class="active"><a href='/'>Home</a></li>
-            <li role="presentation"><a href="#">Profile</a></li>
-            <li role="presentation"><a href='/contact/'>Messages</a></li>
+            <!--<li role="presentation"><a href="#">Profile</a></li>-->
+            <li role="presentation"><a href='/contact/'>Contatos</a></li>
         </ul>
     </nav>
 </head>
 <body>   
     <div class="container">
         <h2>Image Gallery</h2>
-        <p>The .thumbnail class can be used to display an image gallery.</p>
-        <p>The .caption class adds proper padding and a dark grey color to text inside thumbnails.</p>
+        <!--<p>The .thumbnail class can be used to display an image gallery.</p>
+        <p>The .caption class adds proper padding and a dark grey color to text inside thumbnails.</p>-->
         <p>Click on the images to enlarge them.</p>
         <div class="row">
         <div class="col-md-4">
@@ -32,13 +32,23 @@
                 </div>
             </a>
             </div>
-        </div> -->
+        </div>
         <div class="col-md-4">
             <div class="thumbnail">
             <a href="{% static 'img/DSC_0079.jpg' %}" target="_blank">
                 <img src="{% static 'img/DSC_0079.jpg' %}" alt="Nature" style="width:100%">
                 <div class="caption">
-                <p>A casa</p>
+                <p></p>
+                </div>
+            </a>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="thumbnail">
+            <a href="{% static 'img/DSC_0059.jpg' %}" target="_blank">
+                <img src="{% static 'img/DSC_0059.jpg' %}" alt="Nature" style="width:100%">
+                <div class="caption">
+                <p></p>
                 </div>
             </a>
             </div>
