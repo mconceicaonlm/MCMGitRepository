@@ -1,10 +1,6 @@
+.git
 *.pyc
 *~
 __pycache__
 MCMenvir
-db.sqlite3
-/static
-/AppTestPythoAnyWhere/static
-/AppTestPythoAnyWhere/templates/experimentar.html
-/AppTestPythoAnyWhere/templates/basicToexperimentar.html
 .DS_Store
