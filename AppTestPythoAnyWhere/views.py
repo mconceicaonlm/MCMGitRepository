@@ -34,7 +34,7 @@ def contact (request):
                     fail_silently=False)      
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
-            return redirect('thanks')        
+            return render(request, 'home.html')        
     return render (request, 'basicContacts.html',{'content':['Pode o usar o endereço: XPTO_11@outlook.com', 'ou prencher o formulário a seguir', Mystring]})
 
 def blog (request):
@@ -42,28 +42,6 @@ def blog (request):
 
 def photos (request):
     return render(request, 'photos.html')
-
-def experimentar(request):
-
-    if request.method == 'GET':
-        form = ContactForm()
-    else:
-        form = ContactForm(request.POST)
-        if form.is_valid():
-            name = form.cleaned_data['nome']
-            subject = form.cleaned_data['assunto']
-            from_email = form.cleaned_data['correio']
-            message = form.cleaned_data['mensagem']
-            try:
-                send_mail(subject,
-                    message,
-                    from_email,
-                    ['djangotests123@gmail.com', from_email],
-                    fail_silently=False)      
-            except BadHeaderError:
-                return HttpResponse('Invalid header found.')
-            return redirect('thanks')        
-    return render(request, "basicToexperimentar.html", {'form': form})
 
 def thanks(request):
     return HttpResponse('Thank you for your message.')
