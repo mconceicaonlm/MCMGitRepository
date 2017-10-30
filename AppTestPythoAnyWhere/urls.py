@@ -10,6 +10,5 @@ urlpatterns = [
     url(r'^contact/$', views.contact, name='contact'),
     url(r'^blog', views.blog, name='blog'),
     url(r'^photos', views.photos, name='photos'),
-    url(r'^experimentar', views.experimentar, name='experimentar'),
     url(r'^thanks', views.thanks, name='thanks'),
     ]
