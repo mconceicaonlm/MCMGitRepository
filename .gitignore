@@ -1,11 +1,10 @@
-AppTestPythoAnyWhere\static\css
-AppTestPythoAnyWhere\static\fonts
-AppTestPythoAnyWhere\static\js
-.git
 *.pyc
 *~
 __pycache__
-MCMenvir
-.DS_Store
+MCMvenv
 db.sqlite3
-.gitignore
+/static
+/static/css
+/static/fonts
+/static/js
+.DS_Store
