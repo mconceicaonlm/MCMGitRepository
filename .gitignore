@@ -1,6 +1,11 @@
+AppTestPythoAnyWhere\static\css
+AppTestPythoAnyWhere\static\fonts
+AppTestPythoAnyWhere\static\js
 .git
 *.pyc
 *~
 __pycache__
 MCMenvir
 .DS_Store
+db.sqlite3
+.gitignore
