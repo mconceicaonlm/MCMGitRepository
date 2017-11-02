@@ -1,10 +1,8 @@
 *.pyc
 *~
 __pycache__
-MCMvenv
+.git
+.gitignore
 db.sqlite3
-/static
-/static/css
-/static/fonts
-/static/js
+/static/
 .DS_Store
