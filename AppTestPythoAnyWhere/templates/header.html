@@ -1,78 +1,83 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-<title> MCM Oneeeee </title>
-<meta charset="utf-8">
+<title> Pagina de testes </title>
+<meta charset="UTF-8"/>
 {% load staticfiles %} 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <style>
-    /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
-    .row.content {height: 549px}
-    /* Set gray background color and 100% height */
-    .sidenav {
-    background-color:darkorange;
-    height: 100%;
-    color-interpolation-filters: red;
-    border-bottom: thick dotted darkgoldenrod;
-    }
-    .body {
+  /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+  .row.content {height: 549px}
+  /* Set gray background color and 100% height */
+  .sidenav {
+  background-color:blue;
+  height: 100%;
+
+  border-bottom: thick dotted darkgoldenrod;
+  color:rgb(0, 0, 0)
+  }
+  .body {
     width: 100%;
     background-image: url("{% static 'img/Lisboa.png' %}");
     background-size: cover;
     background-repeat: no-repeat;
-    border-style: solid;
-    }
-    /* Set black background color, white text and some padding */
-    footer {
+    
+  }
+
+  /* Set black background color, white text and some padding */
+  footer {
     background-color: white;
     color: white;
     padding: 15px;
-    }
-    .bt2{
-    position: absolute;
-    right: 0px;
-    top: 0px;
-    padding-left: 1000px;
-    }
-    /* On small screens, set height to 'auto' for sidenav and grid */
-    @media screen and (max-width: 767px) {
-    .sidenav {
-        height: auto;
-        padding: 10px;
-    }
-    .row.content {height: auto;} 
-    }
-    .busca-organica{
-      width:120px;
-      height:27px;
-      background-color:#FFF;
-      display:none;
-    }
-    .btn-pesq{
-      display:block;
-    }
+  }
+  .NavbarMenu {
+    color: rgb(212, 61, 61);
+    font-size: 16px;
+    font-family: Arial, Tahoma, Verdana;
+    width: 100%;
+    height: 25px;
+    font-weight: bold;margin: 0;padding: 0;
+  }
+  
+  /* On small screens, set height to 'auto' for sidenav and grid */
+  /*****
+  @media screen and (max-width: 767px) {
+  .sidenav {
+      width: 100%;
+      height: 10%;
+      padding: 10%
+  }
+  .row.content {height: auto;} 
+  }
+  ***/
+
 </style>
 </head>
-<body class="body" style=color:black>
+<body class="body">
   <div class="container-fluid">
-    <div class="row content">
-      <div class="col-sm-2 sidenav">
-        <h4>Oneeeee </h4>
-          <ul class="nav nav-pills nav-stacked">
-            <li><a href="">Home</a></li>
-            <li><a href="/blog/">blog</a></li>  
-            <li><a href="/photos/">Photos</a></li>
-            <li class="active"><a href="/contact/">Contacts</a></li>
-          </ul>
+     <div class="row content">
+        <div class="col-xs-2 sidenav">
+          <nav class="nav NavbarMenu">
+            <div class="wrap" >
+              <h4>Para testes </h4>
+                <ul class="nav nav-pills nav-stacked">
+                  <li><a visited:{color: #0000ff} href="">Home</a></li>
+                  <li><a href="/blog/">blog</a></li>  
+                  <li><a href="/photos/">Photos</a></li>
+                  <li><a href="/contact/">Contacts</a></li>
+              </ul>
+            </div>
+        </nav>
       </div>
     </div>
   </div>
 </body>
-  <footer class="container-fluid">
-    <div class="container-fluid" style="margin-right:0%">
+<footer class="container-fluid">
+  <div class="row">
+    <div class="col-sm-10">
       <a href="https://www.facebook.com/facebook" target="_blank">
       <img src="{% static 'img/logos/if_facebook_128_221698.png' %}"></a>
       <a href="https://www.linkedin.com/"target="_blank">
@@ -82,6 +87,7 @@
       <a href="https://www.google.com/"target="_blank">
       <img src="{% static 'img/logos/if_google_128_221701.png' %}" style='max-height:100px' alt="face"></a>
     </div>
-  </footer>
+  </div>
+</footer>
 </html>
 
